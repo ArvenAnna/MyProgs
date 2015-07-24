@@ -1,0 +1,24 @@
+<?php
+
+$fp = fopen('input.txt','r');
+$j=0;
+$length=0;
+
+while(!feof($fp))
+  {
+    $char = fgetc($fp);
+    if($char==1)
+     {
+      if ($j>$length)
+        {$length=$j;}
+      $j=0;
+     }
+    else {$j++;}
+  }
+
+fclose($fp);
+$fp = fopen('output.txt','w+');
+fwrite($fp, $length);
+fclose($fp);
+
+?>
