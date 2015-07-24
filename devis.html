@@ -1,0 +1,38 @@
+# MyProgs
+<html>
+<body>
+<script>
+
+var number;
+number = prompt('input positive number except 0:','');
+var result;
+result=1;
+result=result.toString()+' ';
+
+if(!isNaN(number))
+  {
+    if(number<=0)
+      {alert('This is not positive not null number');}
+    else
+    {
+      var i;
+      i=2;
+
+      while(i<number)
+        {
+         if(number%i==0)
+           { 
+            	result=result+' '+i.toString();
+	          }
+          i++;
+         }
+      result=result+' '+number.toString();
+      alert(result);
+    }
+ }
+ 
+else {alert('This is not number');}
+
+</script>
+</body>
+</html>
